@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:multi_action",
+  "title": "Edit Interaction",
+  "external_title": "",
+  "body": [],
+  "inputs": [],
+  "can_close_with_escape": true,
+  "pause": false,
+  "after_action": "none",
+  "columns": 2,
+  "actions": [
+    {
+      "label": "Remove Interaction",
+      "action": {
+        "type": "minecraft:run_command",
+        "template": "",
+        "command": "kill @s"
+      }
+    }
+  ]
+}
