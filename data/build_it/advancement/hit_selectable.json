@@ -1,0 +1,16 @@
+{
+  "criteria": {
+    "click-interaction": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:interaction",
+          "nbt": "{Tags:[\"BuildItSelectable\"]}"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "build_it:interact/hit_interaction"
+  }
+}  

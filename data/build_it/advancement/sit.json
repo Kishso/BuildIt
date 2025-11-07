@@ -1,0 +1,33 @@
+{
+  "display": {
+        "icon": 
+        {
+            "id": "minecraft:oak_stairs"
+        },
+        "title": {
+            "text": "Take a Seat"
+        },
+        "description": {
+            "text": "Interact with Sit Interaction"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false,
+        "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
+  },
+  "criteria": {
+    "click-interaction": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:interaction",
+          "nbt": "{Tags:[\"BuildItSitInteraction\"]}"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "build_it:interact/sit"
+  }
+}
