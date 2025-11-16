@@ -7,6 +7,7 @@ execute if score HasItem StackFrame_HitInteraction matches 0 run function build_
 
 execute if score HasItem StackFrame_HitInteraction matches 1 run execute if entity @s[nbt={SelectedItem:{components:{"minecraft:item_model":"build_it:hammer_move"}}}] run function build_it:interact/move_selected
 execute if score HasItem StackFrame_HitInteraction matches 1 run execute if entity @s[nbt={SelectedItem:{components:{"minecraft:item_model":"build_it:hammer_rotate"}}}] run function build_it:interact/rotate_selected
+execute if score HasItem StackFrame_HitInteraction matches 1 run execute if entity @s[nbt={SelectedItem:{components:{"minecraft:item_model":"build_it:hammer_resize"}}}] run function build_it:interact/resize_selected
 
 
 execute as @e[type=minecraft:interaction,tag=BuildItSelectable] if data entity @s attack run data remove entity @s attack

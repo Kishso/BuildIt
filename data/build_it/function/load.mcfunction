@@ -1,5 +1,9 @@
 scoreboard objectives add PlayerSelectionTable dummy
 scoreboard objectives add EntityIds dummy
+scoreboard objectives add BuildItConstants dummy
+
+
+function build_it:utility/init_global_constants
 
 scoreboard objectives add BlockDisplays dummy
 

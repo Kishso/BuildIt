@@ -10,13 +10,26 @@ execute as @e[type=minecraft:interaction,tag=BuildItSelectable] if data entity @
 execute if score IsSelected StackFrame_MoveSelected matches 0 run execute as @e[type=minecraft:interaction,tag=BuildItSelectable] if data entity @s attack run team join TargetEntities
 execute if score IsSelected StackFrame_MoveSelected matches 1 run execute as @e[tag=BuildItSelectable] if score @s PlayerSelectionTable = TargetPlayer StackFrame_MoveSelected run team join TargetEntities
 
-execute if entity @s[y_rotation=135..-135, x_rotation=-45..45] run execute as @e[team=TargetEntities] run function build_it:move/move_part {position_index:2, add_or_remove:remove, step:100}
-execute if entity @s[y_rotation=-135..-45, x_rotation=-45..45] run execute as @e[team=TargetEntities] run function build_it:move/move_part {position_index:0, add_or_remove:add, step:100}
-execute if entity @s[y_rotation=-45..45, x_rotation=-45..45] run execute as @e[team=TargetEntities] run function build_it:move/move_part {position_index:2, add_or_remove:add, step:100}
-execute if entity @s[y_rotation=45..135, x_rotation=-45..45] run execute as @e[team=TargetEntities] run function build_it:move/move_part {position_index:0, add_or_remove:remove, step:100}
+scoreboard objectives add StepSize_Move dummy
 
-execute if entity @s[x_rotation=-90..-45] run execute as @e[team=TargetEntities] run function build_it:move/move_part {position_index:1, add_or_remove:add, step:100}
-execute if entity @s[x_rotation=45..90] run execute as @e[team=TargetEntities] run function build_it:move/move_part {position_index:1, add_or_remove:remove, step:100} 
+execute as @e[team=TargetEntities] run scoreboard players set @s StepSize_Move 100
+
+execute if predicate build_it:player_sneaking run execute as @e[team=TargetEntities] run scoreboard players operation @s StepSize_Move *= NegOne BuildItConstants
+
+execute if entity @s[y_rotation=45..135, x_rotation=-45..45] run execute as @e[team=TargetEntities] run scoreboard players operation @s StepSize_Move *= NegOne BuildItConstants
+execute if entity @s[y_rotation=135..-135, x_rotation=-45..45] run execute as @e[team=TargetEntities] run scoreboard players operation @s StepSize_Move *= NegOne BuildItConstants
+execute if entity @s[x_rotation=45..90] run execute as @e[team=TargetEntities] run scoreboard players operation @s StepSize_Move *= NegOne BuildItConstants
+
+execute if entity @s[y_rotation=135..-135, x_rotation=-45..45] run execute as @e[team=TargetEntities] run function build_it:block_displays/move {position_index:2}
+execute if entity @s[y_rotation=-45..45, x_rotation=-45..45] run execute as @e[team=TargetEntities] run function build_it:block_displays/move {position_index:2}
+
+execute if entity @s[y_rotation=-135..-45, x_rotation=-45..45] run execute as @e[team=TargetEntities] run function build_it:block_displays/move {position_index:0}
+execute if entity @s[y_rotation=45..135, x_rotation=-45..45] run execute as @e[team=TargetEntities] run function build_it:block_displays/move {position_index:0}
+
+execute if entity @s[x_rotation=-90..-45] run execute as @e[team=TargetEntities] run function build_it:block_displays/move {position_index:1}
+execute if entity @s[x_rotation=45..90] run execute as @e[team=TargetEntities] run function build_it:block_displays/move {position_index:1} 
 
 team remove TargetEntities
+
+scoreboard objectives remove StepSize_Move
 scoreboard objectives remove StackFrame_MoveSelected

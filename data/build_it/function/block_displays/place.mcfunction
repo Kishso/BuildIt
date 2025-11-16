@@ -9,7 +9,3 @@ scoreboard players operation @e[type=minecraft:block_display, tag=BeingPlaced] B
 
 tag @e[type=minecraft:interaction, tag=AssignBlockDisplay] remove AssignBlockDisplay
 tag @e[type=minecraft:block_display, tag=BeingPlaced] remove BeingPlaced
-
-
-
-
