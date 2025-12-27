@@ -19,5 +19,5 @@ function build_it:utility/init_global_constants
 # Scoreboard for tracking which block displays correspond to what interaction entities
 scoreboard objectives add BlockDisplays dummy
 
-execute unless data storage build_it.saved_projects next_project_idx run data modify storage build_it.saved_projects next_project_idx set value 0
+execute unless data storage build_it:saved_projects next_project_idx run data modify storage build_it:saved_projects next_project_idx set value 0
 execute unless score NextId EntityIds matches 0..2147483647 run scoreboard players set NextId EntityIds 0
