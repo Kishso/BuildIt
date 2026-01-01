@@ -21,6 +21,10 @@ execute as @e[type=interaction, tag=BuildIt_BlockDisplayInteraction] if score @s
 
 tag @e[type=minecraft:interaction, tag=CurrentProjectInteraction] remove CurrentOriginEntity
 
+data modify storage build_it:saved_projects project_nbt set from storage build_it:saved_projects current_project
+function build_it:project_management/utility/give_project_blueprint with storage build_it:saved_projects
+data remove storage build_it:saved_projects project_nbt
+
 data modify storage build_it:saved_projects projects append from storage build_it:saved_projects current_project
 data remove storage build_it:saved_projects current_project
 

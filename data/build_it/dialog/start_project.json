@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:confirmation",
+  "title": "Create New Project?",
+  "inputs": [],
+  "yes": {
+    "label": "Yes",
+    "action": {
+      "type": "minecraft:run_command",
+      "command": "trigger build_it.use_blueprint set 1"
+    }
+  },
+  "no": {
+    "label": "Cancel",
+    "action": {
+      "type": "minecraft:run_command",
+      "command": "trigger build_it.use_blueprint set -1"
+    }
+  },
+  "pause": false
+}       
