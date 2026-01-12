@@ -1,0 +1,1 @@
+$give @s $(id)[minecraft:item_model="$(item_model)", minecraft:item_name="$(item_name)", minecraft:custom_data=$(custom_data)]

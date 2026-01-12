@@ -11,7 +11,7 @@
         {
             "mainhand": {
                 "components": {
-                    "item_model": "build_it:blueprint_blank"
+                    "item_model": "build_it:blueprint_edit"
                 }
             }
         }
@@ -26,7 +26,7 @@
         {
             "offhand": {
                 "components": {
-                    "item_model": "build_it:blueprint_blank"
+                    "item_model": "build_it:blueprint_edit"
                 }
             }
         }

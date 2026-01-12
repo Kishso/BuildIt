@@ -1,18 +1,18 @@
 {
   "criteria": {
     "click-ineraction": {
-      "trigger": "minecraft:consume_item",
+      "trigger": "minecraft:tick",
       "conditions": {
         "player": [
           {
             "condition": "minecraft:reference",
-            "name": "build_it:player_holding_blank_blueprint"
+            "name": "build_it:player_holding_edit_blueprint"
           }
         ]
       }
     }
   },
   "rewards": {
-    "function": "build_it:reward/open_blank_blueprint_reward"
+    "function": "build_it:reward/player_hold_edit_blueprint"
   }
 }  
