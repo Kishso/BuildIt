@@ -1,0 +1,53 @@
+{
+  "type": "minecraft:multi_action",
+  "title": "Edit Display Entity",
+  "body": [],
+  "inputs": [
+    {
+      "type": "minecraft:number_range",
+      "key": "roll",
+      "width": 180,
+      "label": "Roll",
+      "start": -90,
+      "end": 90,
+      "step": 0.1,
+      "initial": 0
+    },
+    {
+      "type": "minecraft:number_range",
+      "key": "yaw",
+      "width": 180,
+      "label": "Yaw",
+      "start": -90,
+      "end": 90,
+      "step": 0.1,
+      "initial": 0
+    },
+    {
+      "type": "minecraft:number_range",
+      "key": "pitch",
+      "width": 180,
+      "label": "Pitch",
+      "start": -90,
+      "end": 90,
+      "step": 0.1,
+      "initial": 0
+    }
+  ],
+  "can_close_with_escape": true,
+  "pause": false,
+  "after_action": "close",
+  "columns": 3,
+  "actions": [
+    {
+      "label": "Save",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger mcpaint.reload"
+      }
+    },
+    {
+      "label": "Save & Exit"
+    }
+  ]
+}

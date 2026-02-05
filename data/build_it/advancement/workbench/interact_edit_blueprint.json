@@ -1,0 +1,22 @@
+{
+  "criteria": {
+    "click-interaction": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:interaction",
+          "nbt": "{Tags:[\"BuildIt_Workbench\"]}"
+        },
+        "player": [
+            {
+                "condition": "minecraft:reference",
+                "name": "build_it:blueprints/holding_edit_blueprint_mainhand"
+            }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "build_it:workbench/rewards/select_with_edit_blueprint"
+  }
+} 

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:confirmation",
+  "title": "Save Blueprint?",
+  "external_title": "Save Blueprint?",
+  "can_close_with_escape": false,
+  "pause": false,
+  "after_action": "close",
+  "yes": {
+    "label": "Yes",
+    "action": {
+      "type": "minecraft:run_command",
+      "command": "/trigger build_it.save_blueprint set 1"
+    }
+  },
+  "no": {
+    "label": "No",
+    "action": {
+      "type": "minecraft:run_command",
+      "command": "/trigger build_it.save_blueprint set 2"
+    }
+  }
+}

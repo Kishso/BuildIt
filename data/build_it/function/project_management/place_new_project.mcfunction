@@ -8,10 +8,10 @@ data modify entity @e[type=minecraft:interaction, tag=CurrentProjectInteraction,
 
 execute as @e[type=minecraft:interaction, tag=CurrentProjectInteraction] at @s align xyz run tp @s ~0.5 ~ ~0.5
 
-data modify storage build_it:functions blueprint.id set value "minecraft:flint"
+data modify storage build_it:functions blueprint.id set value "minecraft:book"
 data modify storage build_it:functions blueprint.item_name set value "Blueprint and Pencil"
 data modify storage build_it:functions blueprint.item_model set value "build_it:blueprint_edit"
-data modify storage build_it:functions blueprint.custom_data.project_interaction.uuid set from entity @e[type=minecraft:interaction, tag=CurrentProjectInteraction, sort=nearest, limit=1] UUID
+data modify storage build_it:functions blueprint.custom_data.target_project set from entity @e[type=minecraft:interaction, tag=CurrentProjectInteraction, sort=nearest, limit=1] UUID
 
 function build_it:reward/helper/macro_give_custom_item with storage build_it:functions blueprint
 

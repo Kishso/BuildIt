@@ -1,0 +1,1 @@
+scoreboard objectives add build_it.edit_dialog_open trigger edit_dialog_open

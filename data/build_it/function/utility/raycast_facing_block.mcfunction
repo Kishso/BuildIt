@@ -15,9 +15,9 @@ data modify entity @e[type=minecraft:armor_stand, tag=BuildIt_RaycastStand, sort
 
 
 # Check for end condition
-execute as @e[type=minecraft:armor_stand, tag=BuildIt_RaycastStand, sort=nearest, limit=1] at @s rotated as @s unless block ~ ~ ~ #air run data modify storage build_it:functions raycast.result.target_pos set from entity @s Pos
-execute as @e[type=minecraft:armor_stand, tag=BuildIt_RaycastStand, sort=nearest, limit=1] at @s rotated as @s unless block ~ ~ ~ #air run data remove storage build_it:functions raycast.inProgress
-execute as @e[type=minecraft:armor_stand, tag=BuildIt_RaycastStand, sort=nearest, limit=1] at @s rotated as @s unless block ~ ~ ~ #air run data modify storage build_it:functions raycast.result.success set value true
+execute as @e[type=minecraft:armor_stand, tag=BuildIt_RaycastStand, sort=nearest, limit=1] at @s rotated as @s unless block ~ ~ ~ #build_it:cursor_placeable run data modify storage build_it:functions raycast.result.target_pos set from entity @s Pos
+execute as @e[type=minecraft:armor_stand, tag=BuildIt_RaycastStand, sort=nearest, limit=1] at @s rotated as @s unless block ~ ~ ~ #build_it:cursor_placeable run data remove storage build_it:functions raycast.inProgress
+execute as @e[type=minecraft:armor_stand, tag=BuildIt_RaycastStand, sort=nearest, limit=1] at @s rotated as @s unless block ~ ~ ~ #build_it:cursor_placeable run data modify storage build_it:functions raycast.result.success set value true
 
 # Check if max distance reached
 $execute unless entity @e[type=minecraft:armor_stand, tag=BuildIt_RaycastStand, distance=..$(max_distance)] run data remove storage build_it:functions raycast.inProgress

@@ -1,0 +1,1 @@
+execute as @e[type=minecraft:item_display, tag=BuildIt_Editable, distance= 0..10] at @s run function build_it:cursor/editable/place with entity @s

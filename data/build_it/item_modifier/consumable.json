@@ -1,0 +1,15 @@
+{
+    "function": "minecraft:set_components",
+    "components": 
+    {
+        "minecraft:consumable": 
+        {
+            "consume_seconds":0.04,
+            "has_consume_particles":false, 
+            "sound":"block.wood.place",
+            "animation":"block", 
+            "on_consume_effects":[]
+        }
+    }
+
+}

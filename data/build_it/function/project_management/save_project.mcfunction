@@ -1,34 +1,19 @@
 # executed as player saving project
-scoreboard objectives add sf_SaveProject dummy
 
-data modify storage build_it:saved_projects current_project set value {}
+say save project
 
-say "Saving Project..."
-execute store result storage build_it:saved_projects current_project.author_id int 1.0 run scoreboard players get @s EntityIds
-$data modify storage build_it:saved_projects current_project.project_name set value "$(project_name)"
+execute unless predicate build_it:player_holding_edit_blueprint_mainhand run return run msg @s "Error: Player not holding WIP blueprint"
+$data modify entity @e[type=minecraft:interaction, nbt={UUID:$(target_project)}, limit=1] data.current_project set value {}
 
-execute store result score ProjectIndex sf_SaveProject run data get storage build_it:saved_projects next_project_idx 1
-scoreboard players add ProjectIndex sf_SaveProject 1
-execute store result storage build_it:saved_projects next_project_idx int 1 run scoreboard players get ProjectIndex sf_SaveProject
+$data modify entity @e[type=minecraft:interaction, nbt={UUID:$(target_project)}, limit=1] data.current_project.author_id set from entity @s UUID
 
-tag @s add TargetPlayer 
+$execute as @e[type=minecraft:item_display, nbt={data:{target_project:$(target_project)}}] run function build_it:project_management/helper/save_item_display_to_project with entity @s data
 
-execute as @e[type=minecraft:interaction, tag=BuildIt_CreateProjectInteraction] if score @s EntityIds = @p[tag=TargetPlayer] PlayerCreateProjectTable run tag @s add CurrentProjectInteraction
+data modify storage build_it:functions blueprint.id set value "minecraft:book"
+data modify storage build_it:functions blueprint.item_name set value "Project Blueprint"
+data modify storage build_it:functions blueprint.item_model set value "build_it:blueprint_complete"
+$data modify storage build_it:functions blueprint.custom_data.project_data set from entity @e[type=minecraft:interaction, nbt={UUID:$(target_project)}, limit=1] data.current_project
 
-tag @e[type=minecraft:interaction, tag=CurrentProjectInteraction] add CurrentOriginEntity
+function build_it:reward/helper/macro_give_custom_consumable_item with storage build_it:functions blueprint
 
-execute as @e[type=interaction, tag=BuildIt_BlockDisplayInteraction] if score @s PlayerCreateProjectTable = @p[tag=TargetPlayer,limit=1] PlayerCreateProjectTable run function build_it:project_management/utility/save_block_display
-
-tag @e[type=minecraft:interaction, tag=CurrentProjectInteraction] remove CurrentOriginEntity
-
-data modify storage build_it:saved_projects project_nbt set from storage build_it:saved_projects current_project
-function build_it:project_management/utility/give_project_blueprint with storage build_it:saved_projects
-data remove storage build_it:saved_projects project_nbt
-
-data modify storage build_it:saved_projects projects append from storage build_it:saved_projects current_project
-data remove storage build_it:saved_projects current_project
-
-tag @s remove TargetPlayer
-tag @e[type=minecraft:interaction, tag=CurrentProjectInteraction] remove CurrentProjectInteraction
-
-scoreboard objectives remove sf_SaveProject
+data remove storage build_it:functions blueprint

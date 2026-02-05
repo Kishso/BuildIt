@@ -1,0 +1,36 @@
+{
+  "condition": "minecraft:any_of",
+  "terms" :
+  [
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "type": "minecraft:player",
+        "equipment": 
+        {
+            "mainhand": {
+                "components": {
+                    "item_model": "build_it:blueprint_complete"
+                }
+            }
+        }
+      }
+    },
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "type": "minecraft:player",
+        "equipment": 
+        {
+            "offhand": {
+                "components": {
+                    "item_model": "build_it:blueprint_complete"
+                }
+            }
+        }
+      }
+    }
+  ]
+}
