@@ -1,0 +1,3 @@
+$execute as @e[type=minecraft:interaction, tag="BuildIt_Action", nbt={interaction:{player:$(UUID)}}] run say hi
+$execute as @e[type=minecraft:interaction, tag="BuildIt_Action", nbt={interaction:{player:$(UUID)}}] run function build_it:actions/common/execute_action with entity @s data
+$execute as @e[type=minecraft:interaction, tag="BuildIt_Action", nbt={interaction:{player:$(UUID)}}] run data remove interaction

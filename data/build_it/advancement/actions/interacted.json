@@ -1,0 +1,18 @@
+{
+  "criteria": {
+    "click-interaction": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:interaction",
+          "nbt": {
+            "Tags": ["BuildIt_Action"]
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "build_it:actions/rewards/interacted"
+  }
+} 

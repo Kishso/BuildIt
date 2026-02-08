@@ -15,6 +15,7 @@ data modify entity @e[type=minecraft:interaction, tag=BeingPlaced, limit=1] data
 data modify entity @e[type=minecraft:interaction, tag=BeingPlaced, limit=1] data.target_project set from entity @s equipment.offhand.components.minecraft:custom_data.target_project
 data modify entity @e[type=minecraft:interaction, tag=BeingPlaced, limit=1] data.target_player set from entity @s UUID
 
+data modify entity @e[type=minecraft:interaction, tag=BeingPlaced, limit=1] data.cursor_type set value "item_display"
 # Apply Spring Animation
 data modify entity @e[type=minecraft:item_display, tag=BeingPlaced, limit=1] transformation.scale set value [0.9,0.9,0.9]
 tag @e[type=minecraft:item_display, tag=BeingPlaced, limit=1] add BuildIt_CursorApplyAnimation

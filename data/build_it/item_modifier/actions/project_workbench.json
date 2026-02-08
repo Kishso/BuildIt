@@ -1,0 +1,14 @@
+{
+    "function": "minecraft:set_components",
+    "components": 
+    {
+        "minecraft:custom_data": 
+        {
+            "build_it:action" : "build_it:workbench/rewards/select_with_edit_blueprint"
+        },
+        "minecraft:item_model": "build_it:blueprint_complete",
+        "lore": ["This action allows you to save projects"],
+        "item_name": "Project Workbench Action Slip"
+    }
+
+}

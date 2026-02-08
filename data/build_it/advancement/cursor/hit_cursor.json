@@ -11,6 +11,6 @@
     }
   },
   "rewards": {
-    "function": "build_it:cursor/switch_cursor_mode"
+    "function": "build_it:cursor/reward/switch_cursor_mode"
   }
 }
