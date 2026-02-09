@@ -1,0 +1,2 @@
+# Executed as player
+give @s minecraft:book[minecraft:item_model="build_it:blueprint_blank", minecraft:item_name="Blank Blueprint", minecraft:consumable={consume_seconds:0.05, has_consume_particles:false, sound:block.wood.place, animation:"block", on_consume_effects:[]}]

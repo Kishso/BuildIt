@@ -12,8 +12,6 @@ execute unless entity @e[type=minecraft:armor_stand, tag=BuildIt_RaycastStand] r
 execute unless entity @e[type=minecraft:armor_stand, tag=BuildIt_RaycastStand] at @s anchored eyes run summon minecraft:armor_stand ^ ^ ^ {NoGravity:true, Tags:["BuildIt_RaycastStand"]}
 data modify entity @e[type=minecraft:armor_stand, tag=BuildIt_RaycastStand, sort=nearest, limit=1] Rotation set from entity @s Rotation
 
-
-
 # Check for end condition
 execute as @e[type=minecraft:armor_stand, tag=BuildIt_RaycastStand, sort=nearest, limit=1] at @s rotated as @s unless block ~ ~ ~ #build_it:cursor_placeable run data modify storage build_it:functions raycast.result.target_pos set from entity @s Pos
 execute as @e[type=minecraft:armor_stand, tag=BuildIt_RaycastStand, sort=nearest, limit=1] at @s rotated as @s unless block ~ ~ ~ #build_it:cursor_placeable run data remove storage build_it:functions raycast.inProgress

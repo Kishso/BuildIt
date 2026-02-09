@@ -5,7 +5,7 @@ $execute unless entity @e[type=minecraft:interaction, nbt={UUID:$(target_project
 $execute unless data entity @p[nbt={UUID:$(target_player)}] SelectedItem run return run say "Error: Player is holding nothing!"
 
 # Do Just Block Display, add item displays and interactions later
-execute at @s run summon minecraft:item_display ~ ~0.5 ~ {Tags:["BeingPlaced", "BuildIt_Editable"]}
+execute at @s run summon minecraft:item_display ~ ~0.5 ~ {Tags:["BeingPlaced", "BuildIt_Edit"]}
 $data modify entity @e[type=minecraft:item_display, tag=BeingPlaced, limit=1] item set from entity @p[nbt={UUID:$(target_player)}] SelectedItem
 $data modify entity @e[type=minecraft:item_display, tag=BeingPlaced, limit=1] data.target_project set value $(target_project)
 

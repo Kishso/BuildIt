@@ -4,11 +4,11 @@
     {
         "minecraft:custom_data": 
         {
-            "build_it:action" : "build_it:workbench/rewards/select_with_edit_blueprint"
+            "build_it:action" : "build_it:actions/sit"
         },
         "minecraft:item_model": "build_it:blueprint_complete",
-        "lore": ["This action allows you to save projects"],
-        "item_name": "Project Workbench Action Slip"
+        "lore": ["This action allows you to pop a squat"],
+        "item_name": "Sit Action Slip"
     }
 
 }

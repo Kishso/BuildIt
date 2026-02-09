@@ -1,0 +1,14 @@
+{
+    "function": "minecraft:set_components",
+    "components": 
+    {
+        "minecraft:custom_data": 
+        {
+            "build_it:action" : "build_it:workbench/actions/save_edit_blueprint"
+        },
+        "minecraft:item_model": "build_it:blueprint_complete",
+        "lore": ["This action allows you to save blueprints that are still in progress into finished blueprints!"],
+        "item_name": "Save In Progress Blueprint Action Slip"
+    }
+
+}

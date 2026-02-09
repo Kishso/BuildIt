@@ -1,4 +1,4 @@
-say "Workbench Interaction"
+execute unless predicate build_it:blueprints/holding_edit_blueprint_mainhand run return run say "Player must be holding edit blueprint!"
 
 scoreboard objectives add build_it.save_blueprint trigger
 scoreboard players enable @s build_it.save_blueprint

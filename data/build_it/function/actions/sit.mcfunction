@@ -1,0 +1,1 @@
+$ride @s mount @e[type=minecraft:interaction, nbt={UUID:$(target_interaction)}, limit=1] 
