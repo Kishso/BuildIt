@@ -9,5 +9,6 @@ data modify storage build_it:functions distance_forward set from entity @s trans
 
 execute as @e[type=minecraft:interaction, tag=BeingPlaced] at @s rotated as @s run function build_it:utility/macro_vector_tp with storage build_it:functions
 data modify entity @e[type=minecraft:interaction, tag=BeingPlaced, sort=nearest, limit=1] data.target_entity set from entity @s UUID
+data modify entity @e[type=minecraft:interaction, tag=BeingPlaced, sort=nearest, limit=1] data.target_player set from storage build_it:functions place_edit_interactions.target_player
 
 execute as @e[type=minecraft:interaction, tag=BeingPlaced] run tag @s remove BeingPlaced

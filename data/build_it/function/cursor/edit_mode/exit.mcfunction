@@ -1,0 +1,1 @@
+function build_it:cursor/edit_mode/remove_edit_interactions with entity @s

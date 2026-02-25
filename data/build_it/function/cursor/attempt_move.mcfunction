@@ -1,6 +1,6 @@
 execute at @s run summon minecraft:marker ~ ~ ~ {Tags:[BuildIt_TempMarker]}
 
-$execute as @p[nbt={UUID:$(target_player)}] at @s rotated as @s run function build_it:utility/raycast_facing_block {step_size:0.05, max_distance:6}
+$execute as @p[nbt={UUID:$(target_player)}] at @s rotated as @s run function build_it:cursor/utility/raycast {step_size:0.05, max_distance:6}
 execute if data storage build_it:functions {raycast:{result:{success:1b}}} run data modify entity @s Pos set from storage build_it:functions raycast.result.last_air_pos 
 execute if data storage build_it:functions {raycast:{result:{success:1b}}} at @s align xyz run tp @s ~0.5 ~ ~0.5
 

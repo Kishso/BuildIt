@@ -7,12 +7,16 @@
           {
             "condition": "minecraft:reference",
             "name": "build_it:player_holding_edit_blueprint"
+          },
+          {
+            "condition": "minecraft:reference",
+            "name": "build_it:player_sneaking"
           }
         ]
       }
     }
   },
   "rewards": {
-    "function": "build_it:cursor/reward/place_cursor"
+    "function": "build_it:cursor/reward/switch_cursor"
   }
-}  
+} 

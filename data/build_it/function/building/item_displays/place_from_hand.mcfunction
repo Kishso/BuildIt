@@ -1,5 +1,5 @@
 # Place What is Currently in Players Hand, executed with Place It Cursor
-say place_from_hand
+
 # Check if project interaction still exists
 $execute unless entity @e[type=minecraft:interaction, nbt={UUID:$(target_project)}] run return run say "Error: Can't find project!"
 $execute unless data entity @p[nbt={UUID:$(target_player)}] SelectedItem run return run say "Error: Player is holding nothing!"

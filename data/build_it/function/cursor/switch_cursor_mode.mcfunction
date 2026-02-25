@@ -1,10 +1,2 @@
-$execute as @e[type=minecraft:interaction, nbt={attack:{player:$(UUID)}, data:{cursor_type:"item_display"}}, limit=1] run data modify entity @s data.new_cursor_type set value "block_display"
-$execute as @e[type=minecraft:interaction, nbt={attack:{player:$(UUID)}, data:{cursor_type:"block_display"}}, limit=1] run data modify entity @s data.new_cursor_type set value "action"
-$execute as @e[type=minecraft:interaction, nbt={attack:{player:$(UUID)}, data:{cursor_type:"action"}}, limit=1] run data modify entity @s data.new_cursor_type set value "item_display"
-
-$execute as @e[type=minecraft:interaction, nbt={attack:{player:$(UUID)}}] if data entity @s data.new_cursor_type run data modify entity @s data.cursor_type set from entity @s data.new_cursor_type
-$execute as @e[type=minecraft:interaction, nbt={attack:{player:$(UUID)}}] if data entity @s data.new_cursor_type run data remove entity @s data.new_cursor_type
-
-$execute as @e[type=minecraft:interaction, nbt={attack:{player:$(UUID)}}] run function build_it:cursor/update_item_model with entity @s data
-
-$data remove entity @e[type=minecraft:interaction, nbt={attack:{player:$(UUID)}}, limit=1] attack
+execute if score @s build_it.cursor.cursor_mode matches 0 run return run function build_it:cursor/edit_mode/enter
+execute if score @s build_it.cursor.cursor_mode matches 1 run return run function build_it:cursor/place_mode/enter

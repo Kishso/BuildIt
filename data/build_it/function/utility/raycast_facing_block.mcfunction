@@ -8,6 +8,8 @@
 $data modify storage build_it:functions raycast.step_size set value $(step_size)
 $data modify storage build_it:functions raycast.max_distance set value $(max_distance)
 
+execute if data storage build_it:functions raycast.result run data remove storage build_it:functions raycast.result
+
 execute unless entity @e[type=minecraft:armor_stand, tag=BuildIt_RaycastStand] run data modify storage build_it:functions raycast.inProgress set value true
 execute unless entity @e[type=minecraft:armor_stand, tag=BuildIt_RaycastStand] at @s anchored eyes run summon minecraft:armor_stand ^ ^ ^ {NoGravity:true, Tags:["BuildIt_RaycastStand"]}
 data modify entity @e[type=minecraft:armor_stand, tag=BuildIt_RaycastStand, sort=nearest, limit=1] Rotation set from entity @s Rotation

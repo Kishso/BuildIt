@@ -1,0 +1,1 @@
+$kill @e[type=minecraft:interaction, tag=BuildIt_EditCursor, nbt={data:{target_player:$(UUID)}}]

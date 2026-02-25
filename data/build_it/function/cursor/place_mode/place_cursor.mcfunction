@@ -1,11 +1,11 @@
 
 summon minecraft:marker ~ ~ ~ {Tags:[BuildIt_TempMarker]}
 
-function build_it:utility/raycast_facing_block {step_size:0.05, max_distance:6}
+function build_it:cursor/utility/raycast {step_size:0.02, max_distance:6}
 execute if data storage build_it:functions {raycast:{result:{success:1b}}} run data modify entity @e[type=minecraft:marker, tag=BuildIt_TempMarker, limit=1, sort=nearest] Pos set from storage build_it:functions raycast.result.last_air_pos 
 execute if data storage build_it:functions {raycast:{result:{success:1b}}} as @e[type=minecraft:marker, tag=BuildIt_TempMarker, limit=1, sort=nearest] at @s align xyz run tp @s ~0.5 ~ ~0.5
 
-execute at @e[type=minecraft:marker, tag=BuildIt_TempMarker, limit=1, sort=nearest] run summon minecraft:interaction ~ ~ ~ {Tags:[BuildIt_Cursor, BeingPlaced]}
+execute at @e[type=minecraft:marker, tag=BuildIt_TempMarker, limit=1, sort=nearest] run summon minecraft:interaction ~ ~ ~ {Tags:[BuildIt_PlaceCursor, BeingPlaced]}
 
 execute at @e[type=minecraft:marker, tag=BuildIt_TempMarker, limit=1, sort=nearest] run summon minecraft:item_display ~ ~0.5 ~ {Tags:[BeingPlaced], item:{id:"minecraft:flint", components:{"minecraft:item_model":"build_it:cursor_item_display"}}}
 
@@ -21,7 +21,7 @@ data modify entity @e[type=minecraft:item_display, tag=BeingPlaced, limit=1] tra
 tag @e[type=minecraft:item_display, tag=BeingPlaced, limit=1] add BuildIt_CursorApplyAnimation
 schedule function build_it:cursor/apply_animation 2t
 
-execute as @e[type=minecraft:interaction, tag=BeingPlaced, limit=1] run schedule function build_it:cursor/check 1t
+execute as @e[type=minecraft:interaction, tag=BeingPlaced, limit=1] run schedule function build_it:cursor/place_mode/update 1t
 
 execute as @e[type=minecraft:interaction, tag=BeingPlaced, limit=1] run tag @s remove BeingPlaced
 execute as @e[type=minecraft:item_display, tag=BeingPlaced, limit=1] run tag @s remove BeingPlaced

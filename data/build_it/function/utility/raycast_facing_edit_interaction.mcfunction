@@ -5,6 +5,7 @@
 # Returns raycast.result.succeded
 # If success, returns raycast.result.target_pos and raycast.result.last_air_pos, both being an nbt collection of {x,y,z} coordinates
 
+say wrong raycast
 $data modify storage build_it:functions raycast.step_size set value $(step_size)
 $data modify storage build_it:functions raycast.max_distance set value $(max_distance)
 

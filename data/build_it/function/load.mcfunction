@@ -15,6 +15,7 @@ scoreboard objectives add ProjectPiecesTable dummy
 scoreboard objectives add BuildItConstants dummy
 
 function build_it:utility/init_global_constants
+function build_it:cursor/init_scoreboards
 function build_it:building/load_triggers
 
 # Scoreboard for tracking which block displays correspond to what interaction entities

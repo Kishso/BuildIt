@@ -1,0 +1,16 @@
+{
+  "criteria": {
+    "click-interaction": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:interaction",
+          "nbt": "{Tags:[\"BuildIt_PlaceCursor\"]}"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "build_it:cursor/reward/switch_place_cursor_mode"
+  }
+}

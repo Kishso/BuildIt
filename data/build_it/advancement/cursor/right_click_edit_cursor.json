@@ -1,16 +1,16 @@
 {
   "criteria": {
     "click-interaction": {
-      "trigger": "minecraft:player_hurt_entity",
+      "trigger": "minecraft:player_interacted_with_entity",
       "conditions": {
         "entity": {
           "type": "minecraft:interaction",
-          "nbt": "{Tags:[\"BuildIt_Cursor\"]}"
+          "nbt": "{Tags:[\"BuildIt_EditCursor\"]}"
         }
       }
     }
   },
   "rewards": {
-    "function": "build_it:cursor/reward/switch_cursor_mode"
+    "function": "build_it:cursor/reward/right_click_edit_cursor"
   }
 }
