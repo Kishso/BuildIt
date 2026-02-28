@@ -1,4 +1,3 @@
-say place cursor
 
 execute unless score @s build_it.cursor.cursor_mode matches 0..1 run scoreboard players set @s build_it.cursor.cursor_mode 0
 

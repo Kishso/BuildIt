@@ -1,6 +1,4 @@
-# executed as player saving project
-
-say save project
+# executed as player saving project 
 
 execute unless predicate build_it:player_holding_edit_blueprint_mainhand run return run msg @s "Error: Player not holding WIP blueprint"
 $data modify entity @e[type=minecraft:interaction, nbt={UUID:$(target_project)}, limit=1] data.current_project set value {}

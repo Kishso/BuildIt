@@ -1,5 +1,4 @@
 # executed as player interaction
-say Remove Project...
 
 data modify storage build_it:functions blueprint.id set value "minecraft:book"
 data modify storage build_it:functions blueprint.item_name set value "Project Blueprint"

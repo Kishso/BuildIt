@@ -1,6 +1,5 @@
 $execute if entity @s[nbt={data:{cursor_display:$(UUID)}}] run return fail
 
-say placing new interaction
 execute at @s run summon minecraft:interaction ~ ~-0.5 ~ {Tags:[BuildIt_EditCursor, BeingPlaced]}
 
 data modify storage build_it:functions distance_side set from entity @s transformation.translation[0]

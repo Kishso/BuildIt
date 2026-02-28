@@ -1,5 +1,4 @@
 # executed as player placing project
-say "Placing Project..."
 
 summon minecraft:marker ~ ~ ~ {Tags:[BuildIt_TempMarker]}
 
