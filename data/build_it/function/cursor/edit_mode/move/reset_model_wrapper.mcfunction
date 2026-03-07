@@ -1,0 +1,1 @@
+$execute as @e[type=minecraft:interaction, nbt={UUID:$(cursor_uuid)}, limit=1] run function build_it:cursor/edit_mode/move/reset_model with entity @s data

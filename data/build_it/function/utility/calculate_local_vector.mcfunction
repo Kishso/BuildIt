@@ -3,8 +3,6 @@
 # tagged CurrentOriginEntity to act as the origin entity
 # Stores result in storage
 
-say "Running Calc Local Vector..."
-
 # Get World Vector
 data modify storage build_it:calculator input1 set from entity @s Pos[0]
 data modify storage build_it:calculator input2 set from entity @e[tag=CurrentOriginEntity,limit=1,sort=nearest] Pos[0]

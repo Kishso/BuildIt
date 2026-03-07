@@ -9,15 +9,16 @@ execute store result score @s build_it.selected_slot_delta run data get storage 
 # Wrap around detection
 execute if score @s build_it.selected_slot_delta matches 8 run scoreboard players set @s build_it.selected_slot_delta -1
 execute if score @s build_it.selected_slot_delta matches 7 run scoreboard players set @s build_it.selected_slot_delta -2
+execute if score @s build_it.selected_slot_delta matches 6 run scoreboard players set @s build_it.selected_slot_delta -3
 execute if score @s build_it.selected_slot_delta matches -8 run scoreboard players set @s build_it.selected_slot_delta 1
 execute if score @s build_it.selected_slot_delta matches -7 run scoreboard players set @s build_it.selected_slot_delta 2
+execute if score @s build_it.selected_slot_delta matches -6 run scoreboard players set @s build_it.selected_slot_delta 3
+
 
 $scoreboard players set @s build_it.selected_slot $(SelectedItemSlot)
 data remove storage build_it:functions calculate_delta_hotbar_slot
 
 execute if score @s build_it.selected_slot_delta matches 0 run return fail
-
-say change detected 
 
 data modify storage build_it:functions move_display.cursor_uuid set value [I;0,0,0,0]
 execute store result storage build_it:functions move_display.cursor_uuid[0] int 1 run scoreboard players get @s build_it.cursor.selected_uuid1
@@ -28,4 +29,4 @@ execute store result storage build_it:functions move_display.cursor_uuid[3] int 
 data modify storage build_it:functions move_display.target_player set from entity @s UUID
 function build_it:building/item_displays/helper/move_from_cursor with storage build_it:functions move_display
 
-#data remove storage build_it:functions move_display
+data remove storage build_it:functions move_display

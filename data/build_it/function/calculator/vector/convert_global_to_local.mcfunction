@@ -1,6 +1,5 @@
 scoreboard objectives add sf_Calculator dummy
 
-say "Converting Global Coords..."
 $data modify storage build_it:calculator vector.x set value $(x)
 $data modify storage build_it:calculator vector.y set value $(y)
 $data modify storage build_it:calculator vector.z set value $(z)

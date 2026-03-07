@@ -10,4 +10,9 @@ execute as @e[type=minecraft:interaction, tag=BeingPlaced] at @s rotated as @s r
 data modify entity @e[type=minecraft:interaction, tag=BeingPlaced, sort=nearest, limit=1] data.target_entity set from entity @s UUID
 data modify entity @e[type=minecraft:interaction, tag=BeingPlaced, sort=nearest, limit=1] data.target_player set from storage build_it:functions place_edit_interactions.target_player
 
+execute as @e[type=minecraft:interaction, tag=BeingPlaced] at @s run summon minecraft:item_display ~ ~0.5 ~ {item:{id:"minecraft:flint", components:{item_model:"build_it:cursor_edit"}}, Tags:["BeingPlaced_ItemDisplay"]}
+data modify entity @e[type=minecraft:item_display, tag=BeingPlaced_ItemDisplay, sort=nearest,limit=1] transformation.scale set value [1.01, 1.01, 1.01]
+data modify entity @e[type=minecraft:interaction, tag=BeingPlaced, sort=nearest, limit=1] data.cursor_display set from entity @e[type=minecraft:item_display, tag=BeingPlaced_ItemDisplay, sort=nearest, limit=1] UUID
+
+execute as @e[type=minecraft:item_display, tag=BeingPlaced_ItemDisplay] run tag @s remove BeingPlaced_ItemDisplay
 execute as @e[type=minecraft:interaction, tag=BeingPlaced] run tag @s remove BeingPlaced

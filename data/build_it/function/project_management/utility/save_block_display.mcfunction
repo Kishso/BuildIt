@@ -1,8 +1,6 @@
 # Executed as BlockDisplayInteraction
 scoreboard objectives add sf_SaveBlockDisplay dummy
 
-say "Saving Block Display"
-
 execute if entity @s[tag=BuildIt_BlockDisplayInteraction] run tag @s add CurrentTargetInteractionEntity
 execute if entity @s[tag=BuildIt_BlockDisplayInteraction] run execute as @e[tag=BuildItBlockEntity] if score @s BlockDisplays = @e[tag=CurrentTargetInteractionEntity,limit=1] EntityIds run tag @s add CurrentTargetDisplayEntity
 

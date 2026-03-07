@@ -1,5 +1,3 @@
-say open_edit_dialog
-
 function build_it:cursor/editable/place_move_cursor with entity @s
 
 scoreboard players enable @s build_it.edit_dialog_open

@@ -1,0 +1,1 @@
+$execute as @e[type=minecraft:interaction, tag=BuildIt_EditCursor, nbt={interaction:{player:$(UUID)}}, limit=1] run function build_it:cursor/edit_mode/move/update_model with entity @s data

@@ -1,0 +1,1 @@
+$data modify entity @e[type=item_display, nbt={UUID:$(cursor_display)}, limit=1] item.components."minecraft:item_model" set value "build_it:cursor_move"

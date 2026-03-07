@@ -13,7 +13,6 @@ execute unless entity @e[type=minecraft:marker, tag=BuildIt_RaycastMarker] at @s
 data modify entity @e[type=minecraft:marker, tag=BuildIt_RaycastMarker, sort=nearest, limit=1] Rotation set from entity @s Rotation
 
 # Check for end condition via Block
-# execute as @e[type=minecraft:marker, tag=BuildIt_RaycastMarker, sort=nearest, limit=1] at @s rotated as @s unless block ~ ~ ~ #build_it:cursor_placeable run say Found Block
 execute as @e[type=minecraft:marker, tag=BuildIt_RaycastMarker, sort=nearest, limit=1] at @s rotated as @s unless block ~ ~ ~ #build_it:cursor_placeable run data modify storage build_it:functions raycast.result.target_pos set from entity @s Pos
 execute as @e[type=minecraft:marker, tag=BuildIt_RaycastMarker, sort=nearest, limit=1] at @s rotated as @s unless block ~ ~ ~ #build_it:cursor_placeable run data remove storage build_it:functions raycast.inProgress
 execute as @e[type=minecraft:marker, tag=BuildIt_RaycastMarker, sort=nearest, limit=1] at @s rotated as @s unless block ~ ~ ~ #build_it:cursor_placeable run data modify storage build_it:functions raycast.result.success set value true

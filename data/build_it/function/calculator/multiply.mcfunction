@@ -1,7 +1,5 @@
 scoreboard objectives add sf_Calculator dummy
 
-execute if score DebugMessages BuildItConstants = One BuildItConstants run say "Multiplying..."
-
 $data modify storage build_it:calculator multiply.input1 set value $(input1) 
 $data modify storage build_it:calculator multiply.input2 set value $(input2) 
 
