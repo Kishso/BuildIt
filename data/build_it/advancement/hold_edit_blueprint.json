@@ -1,0 +1,18 @@
+{
+  "criteria": {
+    "click-ineraction": {
+      "trigger": "minecraft:tick",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:reference",
+            "name": "build_it:player_holding_edit_blueprint"
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "build_it:cursor/reward/place_cursor"
+  }
+}  

@@ -1,0 +1,3 @@
+$execute as @e[type=minecraft:interaction, tag=BuildIt_Action, nbt={interaction:{player:$(UUID)}}, limit=1] run data modify entity @s data.interaction_uuid set from entity @s UUID
+$function build_it:actions/common/execute_action with entity @e[type=minecraft:interaction, tag=BuildIt_Action, nbt={interaction:{player:$(UUID)}}, limit=1] data
+$execute as @e[type=minecraft:interaction, tag=BuildIt_Action, nbt={interaction:{player:$(UUID)}}] run data remove entity @s interaction

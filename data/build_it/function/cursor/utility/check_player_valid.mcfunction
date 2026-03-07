@@ -1,0 +1,1 @@
+$execute as @p[nbt={UUID:$(target_player)}] unless predicate build_it:player_holding_edit_blueprint run function build_it:cursor/remove_cursor

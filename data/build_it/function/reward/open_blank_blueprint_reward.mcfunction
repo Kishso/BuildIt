@@ -1,0 +1,3 @@
+function build_it:project_management/place_new_project
+
+advancement revoke @s only build_it:open_blank_blueprint

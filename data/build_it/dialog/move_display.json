@@ -1,0 +1,144 @@
+{
+  "type": "minecraft:multi_action",
+  "title": "Move Display Entity",
+  "body": {
+    "type": "minecraft:plain_message",
+    "contents": "\n\n\n\n\n\n\n\n\n\n\n"
+  },
+  "inputs": [],
+  "can_close_with_escape": true,
+  "pause": false,
+  "after_action": "none",
+  "exit_action": 
+  {
+    "label": "Exit",
+    "width": 1, 
+    "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger build_it.edit_dialog_open set 0"
+    }
+  },
+  "columns": 6,
+  "actions": [
+    {
+      "label": {
+        "text": "-1",
+        "type": "text",
+        "color": "#18cd2d"
+      },
+      "width": 50,
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger negX_move_nudge"
+      }
+    },
+    {
+      "label": {
+        "text": "-0.1",
+        "type": "text",
+        "color": "#18cd2d"
+      },
+      "width": 50,
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger negX_move_nudge"
+      }
+    },
+    {
+      "label": {
+        "text": "-0.01",
+        "type": "text",
+        "color": "#18cd2d"
+      },
+      "width": 50,
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger negX_move_nudge"
+      }
+    },
+    {
+      "label": {
+        "text": "+1",
+        "type": "text",
+        "color": "#18cd2d"
+      },
+      "width": 50,
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger negX_move_nudge"
+      }
+    },
+    {
+      "label": {
+        "text": "+0.1",
+        "type": "text",
+        "color": "#18cd2d"
+      },
+      "width": 50,
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger negX_move_nudge"
+      }
+    },
+    {
+      "label": {
+        "text": "+0.01",
+        "type": "text",
+        "color": "#18cd2d"
+      },
+      "width": 50,
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger negX_move_nudge"
+      }
+    },
+    {
+      "label": "",
+      "width": 50
+    },
+    {
+      "label": "",
+      "width": 50
+    },
+    {
+      "label": "",
+      "width": 50
+    },
+    {
+      "label": "",
+      "width": 50
+    },
+    {
+      "label": "",
+      "width": 50
+    },
+    {
+      "label": "",
+      "width": 50
+    },
+    {
+      "label": "",
+      "width": 50
+    },
+    {
+      "label": "",
+      "width": 50
+    },
+    {
+      "label": "",
+      "width": 50
+    },
+    {
+      "label": "",
+      "width": 50
+    },
+    {
+      "label": "",
+      "width": 50
+    },
+    {
+      "label": "",
+      "width": 50
+    }
+  ]
+}

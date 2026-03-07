@@ -1,0 +1,2 @@
+
+$execute as @e[nbt={data:{target_project:$(target_project)}}, tag=BuildIt_Edit, sort=furthest] run function build_it:cursor/utility/check_if_pos_in_entity with entity @e[type=minecraft:marker, tag=BuildIt_RaycastMarker, limit=1, sort=nearest]

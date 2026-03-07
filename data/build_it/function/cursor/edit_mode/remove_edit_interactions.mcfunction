@@ -1,0 +1,1 @@
+$execute as @e[type=minecraft:interaction, tag=BuildIt_EditCursor, nbt={data:{target_player:$(UUID)}}] run function build_it:cursor/edit_mode/remove with entity @s data

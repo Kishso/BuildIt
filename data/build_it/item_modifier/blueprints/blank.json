@@ -1,0 +1,10 @@
+{
+    "function": "minecraft:set_components",
+    "components": 
+    {
+        "minecraft:item_model": "build_it:blueprint_blank",
+        "lore": ["Right Click to Create a New Project!"],
+        "item_name": "Blank Blueprint"
+    }
+
+}

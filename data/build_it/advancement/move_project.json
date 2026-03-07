@@ -1,0 +1,22 @@
+{
+  "criteria": {
+    "click-interaction": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:interaction",
+          "nbt": "{Tags:[\"BuildIt_PlacedProject\"]}"
+        },
+        "player": [
+          {
+            "condition": "minecraft:reference",
+            "name": "build_it:player_holding_move_hammer"
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "build_it:reward/move_project_reward"
+  }
+}  

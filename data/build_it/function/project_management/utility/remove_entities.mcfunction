@@ -1,0 +1,1 @@
+$execute as @e[type=item_display, nbt={data:{target_project:$(UUID)}}] run kill @s

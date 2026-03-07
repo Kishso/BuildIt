@@ -1,0 +1,95 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "Edit Move Build Settings"
+  },
+  "pause": false,
+  "inputs": [
+    {
+      "type": "minecraft:single_option",
+      "key": "build_axis",
+      "label": {
+        "text": "Move Direction"
+      },
+      "options": [
+        {
+          "id": "0",
+          "display": {
+            "text": "Use Player Rotation"
+          },
+          "initial": true
+        },
+        {
+          "id": "1",
+          "display": {
+            "text": "Along X Axis"
+          }
+        },
+        {
+          "id": "2",
+          "display": {
+            "text": "Along Y Axis"
+          }
+        },
+        {
+          "id": "3",
+          "display": {
+            "text": "Along Z Axis"
+          }
+        }
+      ]
+    },
+    {
+      "type": "minecraft:single_option",
+      "key": "move_step",
+      "label": {
+        "text": "Step Size"
+      },
+      "options": [
+        {
+          "id": "2",
+          "display": "1/2 Block"
+        },
+        {
+          "id": "4",
+          "display": "1/4 Block"
+        },
+        {
+          "id": "8",
+          "display": "1/8 Block",
+          "initial": true
+        },
+        {
+          "id": "16",
+          "display": "1/16 Block"
+        },
+        {
+          "id": "32",
+          "display": "1/32 block"
+        },
+        {
+          "id": "64",
+          "display": "1/64 Block"
+        }
+      ]
+    }
+  ],
+  "can_close_with_escape": true,
+  "after_action": "close",
+  "actions": [
+    {
+      "label": "Save",
+      "action": {
+        "type": "minecraft:dynamic/run_command",
+        "template" : "trigger build_it.trigger.move_settings set $(move_step)$(build_axis)"
+      }
+    },
+    {
+      "label": "Exit",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger build_it.trigger.move_settings set -1"
+      }
+    }
+  ]
+}

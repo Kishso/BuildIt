@@ -1,0 +1,1 @@
+$execute as @e[type=minecraft:interaction, nbt={UUID:$(uuid)}] at @s run particle minecraft:happy_villager ~ ~ ~ 0.1 0.1 0.1 0.05 1 normal

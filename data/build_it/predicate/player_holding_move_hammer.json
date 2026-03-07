@@ -1,0 +1,15 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "type": "minecraft:player",
+    "equipment": 
+    {
+        "mainhand": {
+            "components": {
+                "item_model": "build_it:hammer_move"
+            }
+        }
+    }
+  }
+}

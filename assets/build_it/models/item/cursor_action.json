@@ -1,0 +1,23 @@
+{
+	"format_version": "1.21.11",
+	"credit": "Made with Blockbench",
+	"parent": "minecraft:item/handheld",
+	"textures": {
+		"particle": "build_it:item/cursor_action",
+		"layer0": "build_it:item/cursor_action"
+	},
+	"elements": [
+		{
+			"from": [0, 0, 0],
+			"to": [16, 16, 16],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#layer0"},
+				"east": {"uv": [0, 0, 16, 16], "texture": "#layer0"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#layer0"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#layer0"},
+				"up": {"uv": [16, 16, 0, 0], "texture": "#layer0"},
+				"down": {"uv": [16, 0, 0, 16], "texture": "#layer0"}
+			}
+		}
+	]
+}

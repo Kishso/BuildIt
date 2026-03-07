@@ -1,0 +1,3 @@
+$execute as @s[nbt={data:{cursor_type:"item_display"}}] run data modify entity @e[type=minecraft:item_display, nbt={UUID:$(cursor_display)}, limit=1] item.components.minecraft:item_model set value "build_it:cursor_item_display" 
+$execute as @s[nbt={data:{cursor_type:"block_display"}}] run data modify entity @e[type=minecraft:item_display, nbt={UUID:$(cursor_display)}, limit=1] item.components.minecraft:item_model set value "build_it:cursor_block_display"
+$execute as @s[nbt={data:{cursor_type:"action"}}] run data modify entity @e[type=minecraft:item_display, nbt={UUID:$(cursor_display)}, limit=1] item.components.minecraft:item_model set value "build_it:cursor_action"

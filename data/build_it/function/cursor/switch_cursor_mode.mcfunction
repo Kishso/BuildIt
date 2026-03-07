@@ -1,0 +1,2 @@
+execute if score @s build_it.cursor.cursor_mode matches 0 run return run function build_it:cursor/edit_mode/enter
+execute if score @s build_it.cursor.cursor_mode matches 1 run return run function build_it:cursor/place_mode/enter

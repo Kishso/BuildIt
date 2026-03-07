@@ -1,0 +1,2 @@
+
+$execute at @e[type=minecraft:interaction, nbt={attack:{player:$(UUID)}}, limit=1, sort=nearest] run summon minecraft:item_display ~ ~0.5 ~ {item:{id:"minecraft:flint", components:{"minecraft:item_model":"build_it:cursor_move"}}}

@@ -1,0 +1,1 @@
+$give @s minecraft:written_book[minecraft:custom_data=$(project_nbt)]

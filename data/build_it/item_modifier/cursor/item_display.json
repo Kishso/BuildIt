@@ -1,0 +1,12 @@
+{
+    "function": "minecraft:set_components",
+    "components": 
+    {
+        "minecraft:custom_data": 
+        {
+            "cursor_type": "item_display"
+        },
+        "minecraft:item_model": "build_it:cursor_item_display"
+    }
+
+}

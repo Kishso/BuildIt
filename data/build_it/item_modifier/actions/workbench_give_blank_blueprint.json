@@ -1,0 +1,14 @@
+{
+    "function": "minecraft:set_components",
+    "components": 
+    {
+        "minecraft:custom_data": 
+        {
+            "build_it:action" : "build_it:workbench/actions/give_blank_blueprint"
+        },
+        "minecraft:item_model": "build_it:blueprint_complete",
+        "lore": ["This action allows you to get more blank blueprints"],
+        "item_name": "Give Blank Blueprint Action Slip"
+    }
+
+}

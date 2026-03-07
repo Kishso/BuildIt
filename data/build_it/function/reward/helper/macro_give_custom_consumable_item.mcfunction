@@ -1,0 +1,1 @@
+$give @s $(id)[minecraft:item_model="$(item_model)", minecraft:item_name="$(item_name)", minecraft:custom_data=$(custom_data), minecraft:consumable={consume_seconds:0.04, has_consume_particles:false, sound:block.wood.place, animation:"block", on_consume_effects:[]}]
